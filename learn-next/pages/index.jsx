@@ -1,6 +1,13 @@
+import ProductList from '@/components/ProductList';
+
 // '/'에 해당하는 페이지 컴포넌트
 function ProductPage() {
-	return <div style={{ color: 'blue' }}>Hello Next</div>;
+	return (
+		<div>
+			<h1>상품목록 페이지</h1>
+			<ProductList></ProductList>
+		</div>
+	);
 }
 
 /**
