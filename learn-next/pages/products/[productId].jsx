@@ -1,5 +1,5 @@
+import { fetchProductById } from '@/api';
 import ProductHeader from '@/components/ProductHeader';
-import axios from 'axios';
 import React from 'react';
 
 export default function ProductDetailPage({ message, productInfo }) {
@@ -15,9 +15,8 @@ export default function ProductDetailPage({ message, productInfo }) {
 }
 
 export async function getServerSideProps(context) {
-	console.log(context.params.productId);
 	const id = context.params.productId;
-	const response = await axios.get(`http://localhost:4000/products/${id}`);
+	const response = await fetchProductById(id);
 
 	return {
 		props: {
