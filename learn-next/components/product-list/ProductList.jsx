@@ -13,8 +13,6 @@ function ProductList() {
 		});
 	}, []);
 
-	console.log(products);
-
 	return (
 		<ul>
 			{products &&
